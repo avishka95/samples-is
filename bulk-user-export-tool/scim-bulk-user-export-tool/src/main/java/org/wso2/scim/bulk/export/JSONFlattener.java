@@ -83,7 +83,7 @@ public class JSONFlattener {
                 }
             }
         } else if (!excludedAttributes.contains(prefix)) {
-            flatJsonNode.put(prefix, node.textValue());
+            flatJsonNode.put(prefix, "=\""+ node.textValue()+"\"");
         }
         return flatJsonNode;
     }

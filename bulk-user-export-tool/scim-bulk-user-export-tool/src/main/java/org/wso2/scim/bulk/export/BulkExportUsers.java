@@ -53,6 +53,7 @@ public class BulkExportUsers {
     private static final int START_INDEX = 1;
     private static final int DEFAULT_COUNT = 100;
     private static final int MAX_COUNT = -1;
+    private static final String DEFAULT_DOMAIN = "PRIMARY";
 
     private static final Logger LOGGER = Logger.getLogger(BulkExportUsers.class.getName());
 
@@ -66,7 +67,7 @@ public class BulkExportUsers {
         }
 
         String attributesToExclude = "schemas,meta_location,meta_lastModified,meta_resourceType";
-        String userstoreDomain = null;
+        String userstoreDomain = DEFAULT_DOMAIN;
         String hostAddress = args[0];
         String username = args[1];
         String password = args[2];
